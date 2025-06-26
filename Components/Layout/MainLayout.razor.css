@@ -94,3 +94,50 @@ main {
         right: 0.75rem;
         top: 0.5rem;
     }
+
+.bottom-row {
+    background-color: #f7f7f7;
+    border-top: 1px solid #d6d5d5;
+    height: 3.5rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+}
+
+/*Select all a elements where parent is a .bottom-row*/
+.footer-section {
+    display: flex;
+    font-size: 1.1rem;
+}
+
+/*This selector will also work: main article.content*/
+main > .content {
+    overflow-y: auto;
+    margin-bottom: 3.5rem; /*This needs to be the same as bottom row height?*/
+}
+
+...
+@media (min-width: 641px) {
+    ... .bottom-row
+
+{
+    left: 250px;
+    width: calc(100vw - 250px);
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+}
+
+...
+@media (min-width: 960px) {
+    .bottom-row
+
+{
+    gap: 3rem;
+}
+}
